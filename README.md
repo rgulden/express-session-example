@@ -1,5 +1,5 @@
 # express-session-example
-A example Node JS Express API examples using sessions.
+Demonstation using express-sessions when creating a web application backend.
 
 ## Building and deploying
 
