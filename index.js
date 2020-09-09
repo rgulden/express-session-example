@@ -25,13 +25,15 @@ app.get("/", function (req, res) {
 });
 
 app.get("/login", function (req, res) {
-  if (req.session.jwt_token && req.session.jwt_token === jwt_token) {
+  if (req.session.jwt_token && req.session.jwt_token === some_jwt) {
     console.log(req.session.jwt_token);
     res.send("You are already logged in");
   } else {
     var code = (req.headers.authorization || "").split(" ")[1] || "";
 
     if (code === some_secret) {
+      // Next i would generate some session ID (Maybe a hash of password and username) and store in DB
+      // so next time i can validate this is a legit session and wont need to use JWTs
       req.session.jwt_token = some_jwt;
       res.send("You are now logged in!");
     } else {
