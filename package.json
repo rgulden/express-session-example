@@ -1,0 +1,14 @@
+{
+  "name": "test-sessions",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "helmet": "^4.1.0",
+    "parseurl": "^1.3.3"
+  }
+}
